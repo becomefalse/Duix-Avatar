@@ -121,7 +121,8 @@ export async function synthesisVideo(videoId) {
     let result, param
     if (process.env.NODE_ENV === 'development') {
       // 写死调试
-      ({ result, param } = await makeVideoByF2F('test.wav', 'test.mp4'))
+      // ({ result, param } = await makeVideoByF2F('test.wav', 'test.mp4'))
+      ({ result, param } = await makeVideoByF2F(audioPath, model.video_path))
     } else {
       ({ result, param } = await makeVideoByF2F(audioPath, model.video_path))
     }
